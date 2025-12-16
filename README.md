@@ -2,6 +2,8 @@
 
 I Feel Blue is a .NET 8 MAUI desktop app for macOS that lets you flip a switch and locate all bluetooth devices nearby.
 
+![bluetooth application discovering nearby devices](./bt-scan.gif)
+
 ## ✨ What’s inside
 
 - Single-page UI with a toggle that starts/stops CoreBluetooth scans.
