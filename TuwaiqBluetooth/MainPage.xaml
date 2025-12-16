@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TuwaiqBluetooth.MainPage"
+             BackgroundColor="#0A0F1C">
+    <Grid Padding="48" RowSpacing="32">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0,1">
+                <GradientStop Color="#0A0F1C" Offset="0" />
+                <GradientStop Color="#10203D" Offset="1" />
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Label Text="I Feel Blue 🟦🔵"
+               Grid.Row="0"
+               HorizontalOptions="Center"
+               TextColor="#E0F2FF"
+               FontSize="40"
+               FontAttributes="Bold" />
+
+        <Grid Grid.Row="1" ColumnDefinitions="Auto,*" ColumnSpacing="16" VerticalOptions="Center">
+            <Label Text="Bluetooth"
+                   VerticalOptions="Center"
+                   TextColor="#C2D9FF"
+                   FontSize="24" />
+            <Switch Grid.Column="1"
+                    Toggled="OnBluetoothToggled"
+                    HorizontalOptions="Start"
+                    OnColor="#3B82F6"
+                    ThumbColor="White" />
+        </Grid>
+
+        <Border Grid.Row="2"
+                Stroke="#1F3B5C"
+                StrokeThickness="2"
+                BackgroundColor="#112646"
+                Padding="24">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="28" />
+            </Border.StrokeShape>
+            <Grid RowDefinitions="Auto,*" RowSpacing="16">
+                <Label Text="Discovered Devices"
+                       TextColor="#9FB8FF"
+                       FontSize="20"
+                       FontAttributes="Bold" />
+                <CollectionView x:Name="DevicesList" Grid.Row="1">
+                    <CollectionView.EmptyView>
+                        <VerticalStackLayout Spacing="12" HorizontalOptions="Center" VerticalOptions="Center">
+                            <Label Text="No devices yet"
+                                   HorizontalOptions="Center"
+                                   TextColor="#5B7299"
+                                   FontSize="18" />
+                            <Label Text="Keep scanning to populate this space."
+                                   HorizontalOptions="Center"
+                                   TextColor="#4D678E"
+                                   FontSize="16" />
+                        </VerticalStackLayout>
+                    </CollectionView.EmptyView>
+                </CollectionView>
+            </Grid>
+        </Border>
+    </Grid>
+</ContentPage>

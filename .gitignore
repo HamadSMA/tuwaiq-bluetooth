@@ -1,0 +1,49 @@
+# Build outputs
+bin/
+obj/
+/TuwaiqBluetooth/bin/
+/TuwaiqBluetooth/obj/
+*.app/
+
+# Generated artifacts
+*.dsym/
+*.iobj
+*.ipdb
+*.nupkg
+*.vsix
+*.tmp
+*.tmp_proj
+*.userprefs
+*.vsp
+*.vspx
+TestResult*/
+
+# User-specific files
+*.user
+*.userosscache
+*.suo
+*.userprefs
+*.pidb
+*.pdb
+*.opendb
+*.VC.db
+*.cache
+*.swp
+*.orig
+
+# IDE-specific
+.idea/
+.vs/
+.vscode/
+*.code-workspace
+
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
